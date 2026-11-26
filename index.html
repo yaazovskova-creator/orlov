@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Автосервис в Казани. Понятная смета до ремонта и согласование дополнительных работ.">
+<title>По смете — автосервис в Казани</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="wrap top">
+<a class="brand" href="#"><b>ПС</b><span>ПО СМЕТЕ<small>АВТОСЕРВИС · КАЗАНЬ</small></span></a>
+<nav aria-label="Разделы сайта"><a href="#prices">Услуги</a><a href="#estimate">Калькулятор</a><a href="#reviews">Отзывы</a><a href="#feedback">Обратная связь</a></nav>
+<a class="button outline" href="#booking">Записаться</a>
+</header>
+<main>
+<section class="wrap hero">
+<div class="hero-copy"><p class="label"><span></span> Независимый автосервис в Казани</p>
+<h1>Ремонт<br>по смете<span>.</span></h1>
+<p class="lead">Сначала объясняем, что нужно сделать и сколько это стоит. К ремонту приступаем после вашего согласия.</p>
+<div class="actions"><a class="button" href="#estimate">Рассчитать стоимость</a><a class="under" href="#prices">Смотреть цены</a></div>
+</div>
+<figure><img src="garage.jpg" alt="Механик осматривает двигатель под открытым капотом"><figcaption>ДИАГНОСТИКА · ОБСЛУЖИВАНИЕ · РЕМОНТ</figcaption></figure>
+</section>
+<div class="wrap trust" aria-label="Порядок работ">
+<p><b>01</b><span>Показываем причину<small>Объясняем, что нашли на диагностике</small></span></p>
+<p><b>02</b><span>Составляем смету<small>Работы и запчасти отдельными строками</small></span></p>
+<p><b>03</b><span>Согласуем изменения<small>Допработы только с вашего согласия</small></span></p>
+</div>
+<section class="wrap section" id="prices">
+<p class="label">Прайс на работы</p>
+<div class="heading"><h2>Услуги и цены</h2><p>Демонстрационные цены за работу.<br>Запчасти и расходники оплачиваются отдельно.</p></div>
+<div class="prices" id="price-list"></div>
+</section>
+<section class="dark" id="estimate"><div class="wrap section split">
+<div><p class="label">Предварительная смета</p><h2>Сколько стоит ремонт?</h2><p>Выберите нужные работы. Точную цену мастер назовёт после осмотра автомобиля.</p></div>
+<div class="calc"><fieldset><legend>Работы</legend><div id="options"></div></fieldset>
+<div class="total"><span>Работы, от</span><output id="total" aria-live="polite">0 ₽</output></div>
+<a class="button" id="use-estimate" href="#booking">Перенести в запись</a></div>
+</div></section>
+<section class="wrap section" id="reviews"><p class="label">Мнения клиентов</p><h2>Отзывы клиентов</h2><div class="empty"><p>Здесь появятся отзывы клиентов после публикации.</p></div></section>
+<section class="booking" id="booking"><div class="wrap section split">
+<div><p class="label">Запись в сервис</p><h2>Расскажите об автомобиле</h2><p>Укажите модель и опишите, что нужно проверить или отремонтировать.</p></div>
+<form id="request">
+<p class="form-note">Демонстрационная форма. Можно скачать черновик заявки.</p>
+<label>Имя<input name="name" autocomplete="name" required maxlength="100"></label>
+<label>Телефон<input name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+7 (___) ___-__-__"></label>
+<label>Марка и модель<input name="car" required maxlength="100" placeholder="Например, Kia Rio"></label>
+<label>Работы или симптомы<textarea name="details" rows="3" maxlength="1500"></textarea></label>
+<button class="button">Скачать черновик</button><p id="status" role="status"></p>
+</form></div></section>
+<section class="wrap section split" id="feedback">
+<div><h2>Обратная связь</h2><p>Задайте вопрос о смете или расскажите, как прошёл ремонт.</p></div>
+<form id="feedback-form">
+<p class="form-note">Деморежим. Сообщение скачивается текстовым файлом.</p>
+<label>Имя <input name="name" autocomplete="name" maxlength="100"></label>
+<label>Email для ответа <input name="email" type="email" autocomplete="email" maxlength="254"></label>
+<label>Сообщение <textarea name="message" rows="5" required maxlength="2000"></textarea></label>
+<button class="button">Скачать сообщение</button>
+<p id="feedback-status" class="form-status" role="status"></p>
+</form>
+</section>
+</main>
+<footer class="wrap top"><a class="brand" href="#"><b>ПС</b><span>ПО СМЕТЕ<small>АВТОСЕРВИС · КАЗАНЬ</small></span></a><a class="under" href="#prices">Услуги и цены</a></footer>
+</body>
+</html>
